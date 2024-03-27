@@ -10,7 +10,7 @@ RUN pip install deepspeed metrics bitsandbytes modelscope tiktoken  \
     transformers_stream_generator flash-attention -U
 
 # RUN pip install -i https://pypi.tuna.tsinghua.edu.cn/simple flash-attn --no-build-isolation -U
-RUN pip install flash-attn -U
+# RUN pip install flash-attn -U
 
 # VOLUME [ "/root/.cache/huggingface/", "/app/data", "/app/output" ]
 EXPOSE 7860
