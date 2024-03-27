@@ -24,6 +24,7 @@ jobs:
     steps:
       - name: Remove unnecessary files
         run: |
+          cd / && du -h --max-depth=1
           sudo rm -rf /usr/share/dotnet
           sudo rm -rf /opt/ghc
           sudo rm -rf "/usr/local/share/boost"
