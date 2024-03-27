@@ -24,10 +24,9 @@ jobs:
     steps:
       - name: Remove unnecessary files
         run: |
-          systemctl status docker
-          sudo rm -rf /usr/share/dotnet
-          sudo rm -rf /opt/ghc
-          sudo rm -rf "/usr/local/share/boost"
+          sudo rm -rf /usr/share/dotnet \
+          sudo rm -rf /opt/ghc \
+          sudo rm -rf "/usr/local/share/boost" \
           sudo rm -rf "$AGENT_TOOLSDIRECTORY"
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
