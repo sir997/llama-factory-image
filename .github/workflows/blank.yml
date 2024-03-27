@@ -27,7 +27,7 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: docker login
-        run: aliyun/acr-login@v1
+        use: aliyun/acr-login@v1
         with:
           login-server: registry.cn-hangzhou.aliyuncs.com
           username: ${{ secrets.ALIYUN_USER }}
