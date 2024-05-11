@@ -44,5 +44,5 @@ jobs:
         env:
           IMAGE_TAG: ${{ github.ref_name }}
         run: |
-          docker build -t registry.cn-hangzhou.aliyuncs.com/senti/llama-factory:v0.6.3-official .
-          docker push registry.cn-hangzhou.aliyuncs.com/senti/llama-factory:v0.6.3-official
+          docker build -t registry.cn-hangzhou.aliyuncs.com/senti/llama-factory:v0.6.2 .
+          docker push registry.cn-hangzhou.aliyuncs.com/senti/llama-factory:v0.6.2
