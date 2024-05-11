@@ -4,7 +4,6 @@ WORKDIR /app
 
 RUN git clone https://github.com/hiyouga/LLaMA-Factory.git . && git checkout v0.6.3
 
-COPY requirements.txt /app/
 RUN pip install -r requirements.txt
 
 RUN pip install -e .[deepspeed,metrics,bitsandbytes,qwen]
