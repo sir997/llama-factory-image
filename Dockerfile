@@ -2,13 +2,9 @@ FROM nvcr.io/nvidia/pytorch:24.01-py3
 
 WORKDIR /app
 
+RUN git clone https://github.com/hiyouga/LLaMA-Factory.git . && git checkout v0.6.3
+
 COPY requirements.txt /app/
 RUN pip install -r requirements.txt
 
-COPY . /app/
 RUN pip install -e .[deepspeed,metrics,bitsandbytes,qwen]
-
-VOLUME [ "/root/.cache/huggingface/", "/app/data", "/app/output" ]
-EXPOSE 7860
-
-CMD [ "llamafactory-cli", "webui" ]
