@@ -6,7 +6,6 @@ RUN git clone https://github.com/hiyouga/LLaMA-Factory.git . && git checkout v0.
 
 RUN pip install -r requirements.txt
 
-RUN pip install deepspeed metrics bitsandbytes modelscope tiktoken auto_gptq qwen \
-    transformers_stream_generator flash-attention -U
+RUN pip install -e .[deepspeed,metrics,bitsandbytes,qwen,modelscope,tiktoken,auto_gptq,transformers_stream_generator,flash-attention,rich]
 
 CMD [ "python", "src/train_web.py" ]
